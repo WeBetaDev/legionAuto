@@ -1,132 +1,1275 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+    <title>Легион Авто / режим разработки</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
 
-        <!-- Styles -->
-        <style>
-            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-gray-100{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}.border-gray-200{--border-opacity:1;border-color:#edf2f7;border-color:rgba(237,242,247,var(--border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.text-center{text-align:center}.text-gray-200{--text-opacity:1;color:#edf2f7;color:rgba(237,242,247,var(--text-opacity))}.text-gray-300{--text-opacity:1;color:#e2e8f0;color:rgba(226,232,240,var(--text-opacity))}.text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#718096;color:rgba(113,128,150,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.text-gray-900{--text-opacity:1;color:#1a202c;color:rgba(26,32,44,var(--text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}.dark\:bg-gray-900{--bg-opacity:1;background-color:#1a202c;background-color:rgba(26,32,44,var(--bg-opacity))}.dark\:border-gray-700{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.dark\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.dark\:text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}}
-        </style>
+    <!-- Styles -->
+    <style>
+        /*! tailwindcss v2.2.4 | MIT License | https://tailwindcss.com */
 
-        <style>
-            body {
-                font-family: 'Nunito';
+        /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+
+        /*
+        Document
+        ========
+        */
+
+        /**
+        Use a better box model (opinionated).
+        */
+
+        *,
+        ::before,
+        ::after {
+            box-sizing: border-box;
+        }
+
+        /**
+        Use a more readable tab size (opinionated).
+        */
+
+        html {
+            -moz-tab-size: 4;
+            -o-tab-size: 4;
+            tab-size: 4;
+        }
+
+        /**
+        1. Correct the line height in all browsers.
+        2. Prevent adjustments of font size after orientation changes in iOS.
+        */
+
+        html {
+            line-height: 1.15;
+            /* 1 */
+            -webkit-text-size-adjust: 100%;
+            /* 2 */
+        }
+
+        /*
+        Sections
+        ========
+        */
+
+        /**
+        Remove the margin in all browsers.
+        */
+
+        body {
+            margin: 0;
+        }
+
+        /**
+        Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+        */
+
+        body {
+            font-family: system-ui,
+            -apple-system, /* Firefox supports this but not yet `system-ui` */ 'Segoe UI',
+            Roboto,
+            Helvetica,
+            Arial,
+            sans-serif,
+            'Apple Color Emoji',
+            'Segoe UI Emoji';
+        }
+
+        /*
+        Grouping content
+        ================
+        */
+
+        /**
+        1. Add the correct height in Firefox.
+        2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+        */
+
+        hr {
+            height: 0;
+            /* 1 */
+            color: inherit;
+            /* 2 */
+        }
+
+        /*
+        Text-level semantics
+        ====================
+        */
+
+        /**
+        Add the correct text decoration in Chrome, Edge, and Safari.
+        */
+
+        abbr[title] {
+            -webkit-text-decoration: underline dotted;
+            text-decoration: underline dotted;
+        }
+
+        /**
+        Add the correct font weight in Edge and Safari.
+        */
+
+        b,
+        strong {
+            font-weight: bolder;
+        }
+
+        /**
+        1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+        2. Correct the odd 'em' font sizing in all browsers.
+        */
+
+        code,
+        kbd,
+        samp,
+        pre {
+            font-family: ui-monospace,
+            SFMono-Regular,
+            Consolas,
+            'Liberation Mono',
+            Menlo,
+            monospace;
+            /* 1 */
+            font-size: 1em;
+            /* 2 */
+        }
+
+        /**
+        Add the correct font size in all browsers.
+        */
+
+        small {
+            font-size: 80%;
+        }
+
+        /**
+        Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+        */
+
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline;
+        }
+
+        sub {
+            bottom: -0.25em;
+        }
+
+        sup {
+            top: -0.5em;
+        }
+
+        /*
+        Tabular data
+        ============
+        */
+
+        /**
+        1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+        2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+        */
+
+        table {
+            text-indent: 0;
+            /* 1 */
+            border-color: inherit;
+            /* 2 */
+        }
+
+        /*
+        Forms
+        =====
+        */
+
+        /**
+        1. Change the font styles in all browsers.
+        2. Remove the margin in Firefox and Safari.
+        */
+
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            font-family: inherit;
+            /* 1 */
+            font-size: 100%;
+            /* 1 */
+            line-height: 1.15;
+            /* 1 */
+            margin: 0;
+            /* 2 */
+        }
+
+        /**
+        Remove the inheritance of text transform in Edge and Firefox.
+        1. Remove the inheritance of text transform in Firefox.
+        */
+
+        button,
+        select {
+            /* 1 */
+            text-transform: none;
+        }
+
+        /**
+        Correct the inability to style clickable types in iOS and Safari.
+        */
+
+        button,
+        [type='button'],
+        [type='reset'],
+        [type='submit'] {
+            -webkit-appearance: button;
+        }
+
+        /**
+        Remove the inner border and padding in Firefox.
+        */
+
+        ::-moz-focus-inner {
+            border-style: none;
+            padding: 0;
+        }
+
+        /**
+        Restore the focus styles unset by the previous rule.
+        */
+
+        :-moz-focusring {
+            outline: 1px dotted ButtonText;
+        }
+
+        /**
+        Remove the additional ':invalid' styles in Firefox.
+        See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737
+        */
+
+        :-moz-ui-invalid {
+            box-shadow: none;
+        }
+
+        /**
+        Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+        */
+
+        legend {
+            padding: 0;
+        }
+
+        /**
+        Add the correct vertical alignment in Chrome and Firefox.
+        */
+
+        progress {
+            vertical-align: baseline;
+        }
+
+        /**
+        Correct the cursor style of increment and decrement buttons in Safari.
+        */
+
+        ::-webkit-inner-spin-button,
+        ::-webkit-outer-spin-button {
+            height: auto;
+        }
+
+        /**
+        1. Correct the odd appearance in Chrome and Safari.
+        2. Correct the outline style in Safari.
+        */
+
+        [type='search'] {
+            -webkit-appearance: textfield;
+            /* 1 */
+            outline-offset: -2px;
+            /* 2 */
+        }
+
+        /**
+        Remove the inner padding in Chrome and Safari on macOS.
+        */
+
+        ::-webkit-search-decoration {
+            -webkit-appearance: none;
+        }
+
+        /**
+        1. Correct the inability to style clickable types in iOS and Safari.
+        2. Change font properties to 'inherit' in Safari.
+        */
+
+        ::-webkit-file-upload-button {
+            -webkit-appearance: button;
+            /* 1 */
+            font: inherit;
+            /* 2 */
+        }
+
+        /*
+        Interactive
+        ===========
+        */
+
+        /*
+        Add the correct display in Chrome and Safari.
+        */
+
+        summary {
+            display: list-item;
+        }
+
+        /**
+         * Manually forked from SUIT CSS Base: https://github.com/suitcss/base
+         * A thin layer on top of normalize.css that provides a starting point more
+         * suitable for web applications.
+         */
+
+        /**
+         * Removes the default spacing and border for appropriate elements.
+         */
+
+        blockquote,
+        dl,
+        dd,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        hr,
+        figure,
+        p,
+        pre {
+            margin: 0;
+        }
+
+        button {
+            background-color: transparent;
+            background-image: none;
+        }
+
+        fieldset {
+            margin: 0;
+            padding: 0;
+        }
+
+        ol,
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        /**
+         * Tailwind custom reset styles
+         */
+
+        /**
+         * 1. Use the user's configured `sans` font-family (with Tailwind's default
+         *    sans-serif font stack as a fallback) as a sane default.
+         * 2. Use Tailwind's default "normal" line-height so the user isn't forced
+         *    to override it to ensure consistency even when using the default theme.
+         */
+
+        html {
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            /* 1 */
+            line-height: 1.5;
+            /* 2 */
+        }
+
+        /**
+         * Inherit font-family and line-height from `html` so users can set them as
+         * a class directly on the `html` element.
+         */
+
+        body {
+            font-family: inherit;
+            line-height: inherit;
+        }
+
+        /**
+         * 1. Prevent padding and border from affecting element width.
+         *
+         *    We used to set this in the html element and inherit from
+         *    the parent element for everything else. This caused issues
+         *    in shadow-dom-enhanced elements like <details> where the content
+         *    is wrapped by a div with box-sizing set to `content-box`.
+         *
+         *    https://github.com/mozdevs/cssremedy/issues/4
+         *
+         *
+         * 2. Allow adding a border to an element by just adding a border-width.
+         *
+         *    By default, the way the browser specifies that an element should have no
+         *    border is by setting it's border-style to `none` in the user-agent
+         *    stylesheet.
+         *
+         *    In order to easily add borders to elements by just setting the `border-width`
+         *    property, we change the default border-style for all elements to `solid`, and
+         *    use border-width to hide them instead. This way our `border` utilities only
+         *    need to set the `border-width` property instead of the entire `border`
+         *    shorthand, making our border utilities much more straightforward to compose.
+         *
+         *    https://github.com/tailwindcss/tailwindcss/pull/116
+         */
+
+        *,
+        ::before,
+        ::after {
+            box-sizing: border-box;
+            /* 1 */
+            border-width: 0;
+            /* 2 */
+            border-style: solid;
+            /* 2 */
+            border-color: currentColor;
+            /* 2 */
+        }
+
+        /*
+         * Ensure horizontal rules are visible by default
+         */
+
+        hr {
+            border-top-width: 1px;
+        }
+
+        /**
+         * Undo the `border-style: none` reset that Normalize applies to images so that
+         * our `border-{width}` utilities have the expected effect.
+         *
+         * The Normalize reset is unnecessary for us since we default the border-width
+         * to 0 on all elements.
+         *
+         * https://github.com/tailwindcss/tailwindcss/issues/362
+         */
+
+        img {
+            border-style: solid;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input::-moz-placeholder, textarea::-moz-placeholder {
+            opacity: 1;
+            color: #9ca3af;
+        }
+
+        input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+            opacity: 1;
+            color: #9ca3af;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            opacity: 1;
+            color: #9ca3af;
+        }
+
+        button,
+        [role="button"] {
+            cursor: pointer;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-size: inherit;
+            font-weight: inherit;
+        }
+
+        /**
+         * Reset links to optimize for opt-in styling instead of
+         * opt-out.
+         */
+
+        a {
+            color: inherit;
+            text-decoration: inherit;
+        }
+
+        /**
+         * Reset form element properties that are easy to forget to
+         * style explicitly so you don't inadvertently introduce
+         * styles that deviate from your design system. These styles
+         * supplement a partial reset that is already applied by
+         * normalize.css.
+         */
+
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            padding: 0;
+            line-height: inherit;
+            color: inherit;
+        }
+
+        /**
+         * Use the configured 'mono' font family for elements that
+         * are expected to be rendered with a monospace font, falling
+         * back to the system monospace stack if there is no configured
+         * 'mono' font family.
+         */
+
+        pre,
+        code,
+        kbd,
+        samp {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        }
+
+        /**
+         * 1. Make replaced elements `display: block` by default as that's
+         *    the behavior you want almost all of the time. Inspired by
+         *    CSS Remedy, with `svg` added as well.
+         *
+         *    https://github.com/mozdevs/cssremedy/issues/14
+         *
+         * 2. Add `vertical-align: middle` to align replaced elements more
+         *    sensibly by default when overriding `display` by adding a
+         *    utility like `inline`.
+         *
+         *    This can trigger a poorly considered linting error in some
+         *    tools but is included by design.
+         *
+         *    https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210
+         */
+
+        img,
+        svg,
+        video,
+        canvas,
+        audio,
+        iframe,
+        embed,
+        object {
+            display: block;
+            /* 1 */
+            vertical-align: middle;
+            /* 2 */
+        }
+
+        /**
+         * Constrain images and videos to the parent width and preserve
+         * their intrinsic aspect ratio.
+         *
+         * https://github.com/mozdevs/cssremedy/issues/14
+         */
+
+        img,
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        *, ::before, ::after {
+            --tw-translate-x: 0;
+            --tw-translate-y: 0;
+            --tw-rotate: 0;
+            --tw-skew-x: 0;
+            --tw-skew-y: 0;
+            --tw-scale-x: 1;
+            --tw-scale-y: 1;
+            --tw-transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+            --tw-border-opacity: 1;
+            border-color: rgba(229, 231, 235, var(--tw-border-opacity));
+            --tw-shadow: 0 0 #0000;
+            --tw-ring-inset: var(--tw-empty, /*!*/ /*!*/);
+            --tw-ring-offset-width: 0px;
+            --tw-ring-offset-color: #fff;
+            --tw-ring-color: rgba(59, 130, 246, 0.5);
+            --tw-ring-offset-shadow: 0 0 #0000;
+            --tw-ring-shadow: 0 0 #0000;
+            --tw-blur: var(--tw-empty, /*!*/ /*!*/);
+            --tw-brightness: var(--tw-empty, /*!*/ /*!*/);
+            --tw-contrast: var(--tw-empty, /*!*/ /*!*/);
+            --tw-grayscale: var(--tw-empty, /*!*/ /*!*/);
+            --tw-hue-rotate: var(--tw-empty, /*!*/ /*!*/);
+            --tw-invert: var(--tw-empty, /*!*/ /*!*/);
+            --tw-saturate: var(--tw-empty, /*!*/ /*!*/);
+            --tw-sepia: var(--tw-empty, /*!*/ /*!*/);
+            --tw-drop-shadow: var(--tw-empty, /*!*/ /*!*/);
+            --tw-filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+            --tw-backdrop-blur: var(--tw-empty, /*!*/ /*!*/);
+            --tw-backdrop-brightness: var(--tw-empty, /*!*/ /*!*/);
+            --tw-backdrop-contrast: var(--tw-empty, /*!*/ /*!*/);
+            --tw-backdrop-grayscale: var(--tw-empty, /*!*/ /*!*/);
+            --tw-backdrop-hue-rotate: var(--tw-empty, /*!*/ /*!*/);
+            --tw-backdrop-invert: var(--tw-empty, /*!*/ /*!*/);
+            --tw-backdrop-opacity: var(--tw-empty, /*!*/ /*!*/);
+            --tw-backdrop-saturate: var(--tw-empty, /*!*/ /*!*/);
+            --tw-backdrop-sepia: var(--tw-empty, /*!*/ /*!*/);
+            --tw-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+        }
+
+        .fixed {
+            position: fixed;
+        }
+
+        .inset-0 {
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+        }
+
+        .m-\[8px\] {
+            margin: 8px;
+        }
+
+        .mx-\[8px\] {
+            margin-left: 8px;
+            margin-right: 8px;
+        }
+
+        .my-\[16px\] {
+            margin-top: 16px;
+            margin-bottom: 16px;
+        }
+
+        .inline-block {
+            display: inline-block;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .h-screen {
+            height: 100vh;
+        }
+
+        .h-\[60px\] {
+            height: 60px;
+        }
+
+        .h-\[30px\] {
+            height: 30px;
+        }
+
+        .h-\[32px\] {
+            height: 32px;
+        }
+
+        .h-\[28px\] {
+            height: 28px;
+        }
+
+        .h-\[40px\] {
+            height: 40px;
+        }
+
+        .h-\[45px\] {
+            height: 45px;
+        }
+
+        .w-\[245px\] {
+            width: 245px;
+        }
+
+        .w-\[120px\] {
+            width: 120px;
+        }
+
+        .w-full {
+            width: 100%;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .space-y-\[16px\] > :not([hidden]) ~ :not([hidden]) {
+            --tw-space-y-reverse: 0;
+            margin-top: calc(16px * calc(1 - var(--tw-space-y-reverse)));
+            margin-bottom: calc(16px * var(--tw-space-y-reverse));
+        }
+
+        .rounded-xl {
+            border-radius: 0.75rem;
+        }
+
+        .rounded-full {
+            border-radius: 9999px;
+        }
+
+        .border-b {
+            border-bottom-width: 1px;
+        }
+
+        .border-\[\#5c5d61\] {
+            --tw-border-opacity: 1;
+            border-color: rgba(92, 93, 97, var(--tw-border-opacity));
+        }
+
+        .bg-\[\#7396ad\] {
+            --tw-bg-opacity: 1;
+            background-color: rgba(115, 150, 173, var(--tw-bg-opacity));
+        }
+
+        .bg-\[\#181a1f\] {
+            --tw-bg-opacity: 1;
+            background-color: rgba(24, 26, 31, var(--tw-bg-opacity));
+        }
+
+        .bg-white {
+            --tw-bg-opacity: 1;
+            background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+        }
+
+        .bg-opacity-40 {
+            --tw-bg-opacity: 0.4;
+        }
+
+        .bg-opacity-80 {
+            --tw-bg-opacity: 0.8;
+        }
+
+        .bg-opacity-\[65\%\] {
+            --tw-bg-opacity: 65%;
+        }
+
+        .bg-model-3 {
+            background-image: url('/img/bg/bg_index.jpg');
+        }
+
+        .bg-cover {
+            background-size: cover;
+        }
+
+        .bg-center {
+            background-position: center;
+        }
+
+        .bg-no-repeat {
+            background-repeat: no-repeat;
+        }
+
+        .px-\[8px\] {
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+
+        .py-\[4px\] {
+            padding-top: 4px;
+            padding-bottom: 4px;
+        }
+
+        .px-\[20px\] {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .pl-\[8px\] {
+            padding-left: 8px;
+        }
+
+        .pr-\[8px\] {
+            padding-right: 8px;
+        }
+
+        .pl-\[16px\] {
+            padding-left: 16px;
+        }
+
+        .pr-\[32px\] {
+            padding-right: 32px;
+        }
+
+        .pt-\[16vh\] {
+            padding-top: 16vh;
+        }
+
+        .pb-\[120px\] {
+            padding-bottom: 120px;
+        }
+
+        .pb-\[8px\] {
+            padding-bottom: 8px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-\[14px\] {
+            font-size: 14px;
+        }
+
+        .text-\[12px\] {
+            font-size: 12px;
+        }
+
+        .text-\[36px\] {
+            font-size: 36px;
+        }
+
+        .font-medium {
+            font-weight: 500;
+        }
+
+        .font-light {
+            font-weight: 300;
+        }
+
+        .uppercase {
+            text-transform: uppercase;
+        }
+
+        .leading-\[36px\] {
+            line-height: 36px;
+        }
+
+        .leading-normal {
+            line-height: 1.5;
+        }
+
+        .tracking-wider {
+            letter-spacing: 0.05em;
+        }
+
+        .tracking-wide {
+            letter-spacing: 0.025em;
+        }
+
+        .text-\[\#181b21\] {
+            --tw-text-opacity: 1;
+            color: rgba(24, 27, 33, var(--tw-text-opacity));
+        }
+
+        .text-\[\#393c41\] {
+            --tw-text-opacity: 1;
+            color: rgba(57, 60, 65, var(--tw-text-opacity));
+        }
+
+        .text-\[\#5c5d61\] {
+            --tw-text-opacity: 1;
+            color: rgba(92, 93, 97, var(--tw-text-opacity));
+        }
+
+        .text-white {
+            --tw-text-opacity: 1;
+            color: rgba(255, 255, 255, var(--tw-text-opacity));
+        }
+
+        .transition {
+            transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+            transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+            transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 150ms;
+        }
+
+        .duration-500 {
+            transition-duration: 500ms;
+        }
+
+        .hover\:border-b-2:hover {
+            border-bottom-width: 2px;
+        }
+
+        .hover\:border-\[\#181b21\]:hover {
+            --tw-border-opacity: 1;
+            border-color: rgba(24, 27, 33, var(--tw-border-opacity));
+        }
+
+        .hover\:bg-\[\#7396ad\]:hover {
+            --tw-bg-opacity: 1;
+            background-color: rgba(115, 150, 173, var(--tw-bg-opacity));
+        }
+
+        .hover\:bg-opacity-40:hover {
+            --tw-bg-opacity: 0.4;
+        }
+
+        .hover\:text-\[\#181b21\]:hover {
+            --tw-text-opacity: 1;
+            color: rgba(24, 27, 33, var(--tw-text-opacity));
+        }
+
+        @media (min-width: 600px) {
+            .tablet\:h-\[32px\] {
+                height: 32px;
             }
-        </style>
-    </head>
-    <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
+
+            .tablet\:w-auto {
+                width: auto;
+            }
+
+            .tablet\:w-\[256px\] {
+                width: 256px;
+            }
+
+            .tablet\:flex-row {
+                flex-direction: row;
+            }
+
+            .tablet\:space-x-\[25px\] > :not([hidden]) ~ :not([hidden]) {
+                --tw-space-x-reverse: 0;
+                margin-right: calc(25px * var(--tw-space-x-reverse));
+                margin-left: calc(25px * calc(1 - var(--tw-space-x-reverse)));
+            }
+
+            .tablet\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
+                --tw-space-y-reverse: 0;
+                margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+                margin-bottom: calc(0px * var(--tw-space-y-reverse));
+            }
+
+            .tablet\:py-\[4px\] {
+                padding-top: 4px;
+                padding-bottom: 4px;
+            }
+
+            .tablet\:pl-\[16px\] {
+                padding-left: 16px;
+            }
+
+            .tablet\:pr-\[16px\] {
+                padding-right: 16px;
+            }
+
+            .tablet\:pb-\[40px\] {
+                padding-bottom: 40px;
+            }
+
+            .tablet\:text-\[13px\] {
+                font-size: 13px;
+            }
+
+            .tablet\:text-\[40px\] {
+                font-size: 40px;
+            }
+
+            .tablet\:leading-\[21px\] {
+                line-height: 21px;
+            }
+
+            .tablet\:leading-\[1\.15\] {
+                line-height: 1.15;
+            }
+
+            .tablet\:tracking-wider {
+                letter-spacing: 0.05em;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .desktop\:flex {
+                display: flex;
+            }
+
+            .desktop\:hidden {
+                display: none;
+            }
+
+            .desktop\:h-\[54px\] {
+                height: 54px;
+            }
+
+            .desktop\:h-\[32px\] {
+                height: 32px;
+            }
+
+            .desktop\:w-auto {
+                width: auto;
+            }
+
+            .desktop\:w-\[256px\] {
+                width: 256px;
+            }
+
+            .desktop\:flex-row {
+                flex-direction: row;
+            }
+
+            .desktop\:space-x-\[25px\] > :not([hidden]) ~ :not([hidden]) {
+                --tw-space-x-reverse: 0;
+                margin-right: calc(25px * var(--tw-space-x-reverse));
+                margin-left: calc(25px * calc(1 - var(--tw-space-x-reverse)));
+            }
+
+            .desktop\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
+                --tw-space-y-reverse: 0;
+                margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+                margin-bottom: calc(0px * var(--tw-space-y-reverse));
+            }
+
+            .desktop\:rounded-2xl {
+                border-radius: 1rem;
+            }
+
+            .desktop\:py-\[4px\] {
+                padding-top: 4px;
+                padding-bottom: 4px;
+            }
+
+            .desktop\:px-0 {
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+
+            .desktop\:pl-\[32px\] {
+                padding-left: 32px;
+            }
+
+            .desktop\:pt-\[calc\(13vh\+20px\)\] {
+                padding-top: calc(13vh + 20px);
+            }
+
+            .desktop\:pb-\[55px\] {
+                padding-bottom: 55px;
+            }
+
+            .desktop\:text-\[14px\] {
+                font-size: 14px;
+            }
+
+            .desktop\:text-\[42px\] {
+                font-size: 42px;
+            }
+
+            .desktop\:leading-\[1\.15\] {
+                line-height: 1.15;
+            }
+
+            .desktop\:tracking-wider {
+                letter-spacing: 0.05em;
+            }
+        }
+
+        @media (orientation: portrait) {
+            .portrait\:bg-mobile-model-3 {
+                background-image: url('/img/bg/bg_mobile_v2.jpg');
+            }
+        }
+
+        @media (min-width: 600px) {
+            @media (orientation: portrait) {
+                .tablet\:portrait\:pb-\[78px\] {
+                    padding-bottom: 78px;
+                }
+            }
+        }
+    </style>
+
+    <style>
+        body {
+            font-family: 'Play';
+        }
+    </style>
+</head>
+<body
+    class="flex flex-col items-center h-screen bg-center bg-cover bg-no-repeat portrait:bg-mobile-model-3 bg-model-3 antialiased">
+<header class="flex justify-between fixed inset-0 h-[60px] desktop:h-[54px]">
+    <div class="flex items-center pl-[8px] tablet:pl-[16px] desktop:pl-[32px] w-[245px]">
+        <a href="#" class="inline-block pr-[8px] pl-[16px]">
+            <img class="h-[45px]" src="/img/logo/v2/LegionAuto_Black.png" alt="Legion Auto"/>
+        </a>
+    </div>
+    <ul class="hidden desktop:flex items-center text-[#181b21] px-[8px]">
+        <li>
+            <a href="#"
+               class="inline-block rounded-xl font-medium tracking-wider transition duration-500 flex justify-center items-center hover:bg-[#7396ad] hover:bg-opacity-40 text-[14px] py-[4px] px-[8px] h-[32px]">
+          <span class="m-[8px]">
+            О компании
+          </span>
+            </a>
+        </li>
+        <li>
+            <a href="#"
+               class="inline-block rounded-xl font-medium tracking-wider transition duration-500 flex justify-center items-center hover:bg-[#7396ad] hover:bg-opacity-40 text-[14px] py-[4px] px-[8px] h-[32px]">
+          <span class="m-[8px]">
+            Авто в наличии
+          </span>
+            </a>
+        </li>
+        <li>
+            <a href="#"
+               class="inline-block rounded-xl font-medium tracking-wider transition duration-500 flex justify-center items-center hover:bg-[#7396ad] hover:bg-opacity-40 text-[14px] py-[4px] px-[8px] h-[32px]">
+          <span class="m-[8px]">
+            Авто с пробегом
+          </span>
+            </a>
+        </li>
+        <li>
+            <a href="#"
+               class="inline-block rounded-xl font-medium tracking-wider transition duration-500 flex justify-center items-center hover:bg-[#7396ad] hover:bg-opacity-40 text-[14px] py-[4px] px-[8px] h-[32px]">
+          <span class="m-[8px]">
+            Особые предложения
+          </span>
+            </a>
+        </li>
+        <li>
+            <a href="#"
+               class="inline-block rounded-xl font-medium tracking-wider transition duration-500 flex justify-center items-center hover:bg-[#7396ad] hover:bg-opacity-40 text-[14px] py-[4px] px-[8px] h-[32px]">
+          <span class="m-[8px]">
+            Сервис
+          </span>
+            </a>
+        </li>
+        <li>
+            <a href="#"
+               class="inline-block rounded-xl font-medium tracking-wider transition duration-500 flex justify-center items-center hover:bg-[#7396ad] hover:bg-opacity-40 text-[14px] py-[4px] px-[8px] h-[32px]">
+          <span class="m-[8px]">
+            Фин услуги
+          </span>
+            </a>
+        </li>
+    </ul>
+    <ul class="hidden desktop:flex items-center pr-[32px]">
+        <li>
+            <a href="#"
+               class="inline-block rounded-xl font-medium tracking-wider transition duration-500 flex justify-center items-center hover:bg-[#7396ad] hover:bg-opacity-40 text-[14px] py-[4px] px-[8px] h-[32px]">
+          <span class="m-[8px]">
+            8 800 900-77-07
+          </span>
+            </a>
+        </li>
+        <li>
             @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Dashboard</a>
+                @auth
+                <a href="{{ url('/dashboard') }}"
+                   class="inline-block rounded-xl font-medium tracking-wider transition duration-500 flex justify-center items-center hover:bg-[#7396ad] hover:bg-opacity-40 text-[14px] py-[4px] px-[8px] h-[32px]">
+          <span class="m-[8px]">
+            Панель управления
+          </span>
+                </a>
+                @else
+                    <a href="{{ route('login') }}"
+               class="inline-block rounded-xl font-medium tracking-wider transition duration-500 flex justify-center items-center hover:bg-[#7396ad] hover:bg-opacity-40 text-[14px] py-[4px] px-[8px] h-[32px]">
+          <span class="m-[8px]">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                 stroke="currentColor" style="width: 20px; height: 20px;">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+</svg>
+          </span>
+            </a>
+                @endauth
+            @endif
+        </li>
+    </ul>
+    <ul class="flex items-center desktop:hidden pr-[8px] tablet:pr-[16px]">
+        <li>
+            <a href="#" class="inline-block rounded-xl font-medium tablet:leading-[21px] leading-normal tracking-wider transition duration-500 flex justify-center items-center bg-[#7396ad] bg-opacity-40 text-[12px] tablet:text-[13px]
+        tablet:py-[4px] px-[8px] h-[28px] tablet:h-[32px]">
+          <span class="mx-[8px]">
+            Меню
+          </span>
+            </a>
+        </li>
+    </ul>
+</header>
+<div class="flex flex-col h-screen justify-between pt-[16vh] desktop:pt-[calc(13vh+20px)]
+                pb-[120px] tablet:pb-[40px] tablet:portrait:pb-[78px] desktop:pb-[55px] w-full tablet:w-auto">
+    <div class="text-center">
+        <h1 class="font-medium tracking-wide tablet:tracking-wider leading-[36px] tablet:leading-[1.15] text-[#393c41]
+      text-[36px] tablet:text-[40px] desktop:text-[42px] py-[4px]">
+            Новые автомобили
+        </h1>
+        <h2 class="font-light tracking-wide desktop:tracking-wider text-[#5c5d61] text-[14px] pb-[8px]">
+            <a href="#"
+               class="transition border-b hover:border-b-2 border-[#5c5d61] hover:border-[#181b21] hover:text-[#181b21]">
+                Mercedes-Benz
+            </a>
+            <a href="#"
+               class="transition border-b hover:border-b-2 border-[#5c5d61] hover:border-[#181b21] hover:text-[#181b21]" style="margin-left: 1rem;margin-right: 1rem;">
+                BMW
+            </a>
+            <a href="#"
+               class="transition border-b hover:border-b-2 border-[#5c5d61] hover:border-[#181b21] hover:text-[#181b21]">
+                Audi
+            </a>
+        </h2>
+    </div>
+    <div class="flex flex-col tablet:flex-row justify-center items-center tablet:space-x-[25px] space-y-[16px]
+                tablet:space-y-0 my-[16px] px-[20px]">
+        <a href="#"
+           class="inline-block rounded-full desktop:rounded-2xl text-center text-white tracking-wider font-medium uppercase flex justify-center items-center bg-opacity-80 bg-[#181a1f] text-[12px] w-full tablet:w-[256px] h-[40px]">
+            Все модели
+        </a>
+        <a href="#"
+           class="inline-block rounded-full desktop:rounded-2xl text-center text-white tracking-wider font-medium uppercase flex justify-center items-center bg-[#181a1f] bg-opacity-80 text-[12px] w-full tablet:w-[256px] h-[40px]">
+            Онлайн помощь
+        </a>
+    </div>
+</div>
+<!--
+    <div class="relative flex items-top justify-center min-h-screen sm:items-center sm:pt-0">
+            @if (Route::has('login'))
+    <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+@auth
+        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Панель управления</a>
                     @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a>
+        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Вход</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Регистрация</a>
                         @endif
-                    @endauth
+    @endauth
+        </div>
+@endif
+
+    <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
+        <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
+            <img src="/img/logo/v2/LegionAuto_Black.png" alt="Legion Auto" style="height: 6rem;"/>
+        </div>
+
+        <div class="flex justify-center mt-4">
+            <div class="text-center text-sm text-gray-500 sm:text-left">
+                <div class="flex items-center">
+
                 </div>
-            @endif
+            </div>
 
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                    <svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto text-gray-700 sm:h-20">
-                        <g clip-path="url(#clip0)" fill="#EF3B2D">
-                            <path d="M248.032 44.676h-16.466v100.23h47.394v-14.748h-30.928V44.676zM337.091 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.431 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162-.001 2.863-.479 5.584-1.432 8.161zM463.954 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.432 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162 0 2.863-.479 5.584-1.432 8.161zM650.772 44.676h-15.606v100.23h15.606V44.676zM365.013 144.906h15.607V93.538h26.776V78.182h-42.383v66.724zM542.133 78.182l-19.616 51.096-19.616-51.096h-15.808l25.617 66.724h19.614l25.617-66.724h-15.808zM591.98 76.466c-19.112 0-34.239 15.706-34.239 35.079 0 21.416 14.641 35.079 36.239 35.079 12.088 0 19.806-4.622 29.234-14.688l-10.544-8.158c-.006.008-7.958 10.449-19.832 10.449-13.802 0-19.612-11.127-19.612-16.884h51.777c2.72-22.043-11.772-40.877-33.023-40.877zm-18.713 29.28c.12-1.284 1.917-16.884 18.589-16.884 16.671 0 18.697 15.598 18.813 16.884h-37.402zM184.068 43.892c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002-35.648-20.524a2.971 2.971 0 00-2.964 0l-35.647 20.522-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v38.979l-29.706 17.103V24.493a3 3 0 00-.103-.776c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002L40.098 1.396a2.971 2.971 0 00-2.964 0L1.487 21.919l-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v122.09c0 1.063.568 2.044 1.489 2.575l71.293 41.045c.156.089.324.143.49.202.078.028.15.074.23.095a2.98 2.98 0 001.524 0c.069-.018.132-.059.2-.083.176-.061.354-.119.519-.214l71.293-41.045a2.971 2.971 0 001.489-2.575v-38.979l34.158-19.666a2.971 2.971 0 001.489-2.575V44.666a3.075 3.075 0 00-.106-.774zM74.255 143.167l-29.648-16.779 31.136-17.926.001-.001 34.164-19.669 29.674 17.084-21.772 12.428-43.555 24.863zm68.329-76.259v33.841l-12.475-7.182-17.231-9.92V49.806l12.475 7.182 17.231 9.92zm2.97-39.335l29.693 17.095-29.693 17.095-29.693-17.095 29.693-17.095zM54.06 114.089l-12.475 7.182V46.733l17.231-9.92 12.475-7.182v74.537l-17.231 9.921zM38.614 7.398l29.693 17.095-29.693 17.095L8.921 24.493 38.614 7.398zM5.938 29.632l12.475 7.182 17.231 9.92v79.676l.001.005-.001.006c0 .114.032.221.045.333.017.146.021.294.059.434l.002.007c.032.117.094.222.14.334.051.124.088.255.156.371a.036.036 0 00.004.009c.061.105.149.191.222.288.081.105.149.22.244.314l.008.01c.084.083.19.142.284.215.106.083.202.178.32.247l.013.005.011.008 34.139 19.321v34.175L5.939 144.867V29.632h-.001zm136.646 115.235l-65.352 37.625V148.31l48.399-27.628 16.953-9.677v33.862zm35.646-61.22l-29.706 17.102V66.908l17.231-9.92 12.475-7.182v33.841z"/>
-                        </g>
-                    </svg>
-                </div>
-
-                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="p-6">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel.com/docs" class="underline text-gray-900 dark:text-white">Documentation</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel has wonderful, thorough documentation covering every aspect of the framework. Whether you are new to the framework or have previous experience with Laravel, we recommend reading all of the documentation from beginning to end.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laracasts.com" class="underline text-gray-900 dark:text-white">Laracasts</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel-news.com/" class="underline text-gray-900 dark:text-white">Laravel News</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline">Forge</a>, <a href="https://vapor.laravel.com" class="underline">Vapor</a>, <a href="https://nova.laravel.com" class="underline">Nova</a>, and <a href="https://envoyer.io" class="underline">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline">Telescope</a>, and more.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 sm:text-left">
-                        <div class="flex items-center">
-                            <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="-mt-px w-5 h-5 text-gray-400">
-                                <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                            </svg>
-
-                            <a href="https://laravel.bigcartel.com" class="ml-1 underline">
-                                Shop
-                            </a>
-
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="ml-4 -mt-px w-5 h-5 text-gray-400">
-                                <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                            </svg>
-
-                            <a href="https://github.com/sponsors/taylorotwell" class="ml-1 underline">
-                                Sponsor
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+            <div class="text-center text-sm text-gray-500">
+                Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
                     </div>
                 </div>
             </div>
         </div>
-    </body>
+        -->
+</body>
 </html>

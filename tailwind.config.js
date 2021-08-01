@@ -10,13 +10,23 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                sans: ['Play', ...defaultTheme.fontFamily.sans],
             },
+            backgroundImage: theme => ({
+                'model-3': "url('/img/bg/bg_index.jpg')",
+                'mobile-model-3': "url('/img/bg/bg_mobile_v2.jpg')",
+            }),
+        },
+        screens: {
+            'tablet': '600px',
+            'desktop': '1200px',
+            'portrait': {'raw': '(orientation: portrait)'},
         },
     },
 
     variants: {
         opacity: ['responsive', 'hover', 'focus', 'disabled'],
+        extend: {},
     },
 
     plugins: [require('@tailwindcss/ui')],
