@@ -1102,13 +1102,13 @@
 </head>
 <body
     class="flex flex-col items-center h-screen bg-center bg-cover bg-no-repeat portrait:bg-mobile-model-3 bg-model-3 antialiased">
-<header class="flex justify-between fixed inset-0 h-[60px] desktop:h-[54px]">
+<header class="flex justify-between fixed inset-0 h-[60px] desktop:h-[54px] bg-[#181a1f]">
     <div class="flex items-center pl-[8px] tablet:pl-[16px] desktop:pl-[32px] w-[245px]">
         <a href="#" class="inline-block pr-[8px] pl-[16px]">
-            <img class="h-[45px]" src="/img/logo/v2/LegionAuto_Black.png" alt="Legion Auto"/>
+            <img class="h-[45px]" src="/img/logo/v2/LegionAuto.svg" alt="Legion Auto"/>
         </a>
     </div>
-    <ul class="hidden desktop:flex items-center text-[#181b21] px-[8px]">
+    <ul class="hidden desktop:flex items-center text-white px-[8px]">
         <li>
             <a href="#"
                class="inline-block rounded-xl font-medium tracking-wider transition duration-500 flex justify-center items-center hover:bg-[#7396ad] hover:bg-opacity-40 text-[14px] py-[4px] px-[8px] h-[32px]">
@@ -1158,7 +1158,7 @@
             </a>
         </li>
     </ul>
-    <ul class="hidden desktop:flex items-center pr-[32px]">
+    <ul class="hidden desktop:flex items-center text-white pr-[32px]">
         <li>
             <a href="#"
                class="inline-block rounded-xl font-medium tracking-wider transition duration-500 flex justify-center items-center hover:bg-[#7396ad] hover:bg-opacity-40 text-[14px] py-[4px] px-[8px] h-[32px]">
